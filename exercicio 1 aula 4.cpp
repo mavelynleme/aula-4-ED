@@ -1,20 +1,23 @@
 #include <iostream>
 using namespace std;
-int main (){
-	int N;
-	cout << "Digite um numero inteiro N: ";
-	cin >> N;
-	
-	int i = 1;
-	int cont = 0;
-	
-	while (i <= N){
-		if (i % 2 ==0){
-			   cont++;
-		}
-	i++;
-	}
-	cout << "A quantidade de numeros pares e " << cont << endl;
-	
-	return 0;
+
+int main() {
+    const int size = 6;
+    int n[size];
+    float media;
+    
+    cout << "Digite 6 numeros inteiros:" << endl;
+
+    int sum = 0;
+
+    for (int i = 0; i < size; ++i) {
+        cin >> n[i];
+        sum += n[i];
+    }
+
+    media = (float)sum / size;
+
+    cout << "A media e: " << media << endl;
+
+    return 0;
 }
